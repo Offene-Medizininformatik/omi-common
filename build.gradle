@@ -1,0 +1,14 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.github.Offene-Medizininformatik'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = '17'
+}
+
+repositories {
+    mavenCentral()
+}
