@@ -1,4 +1,4 @@
-package main.java.com.omi.common.dto.search;
+package com.omi.common.dto.search;
 
 public record PrescriptionSearchFlags(
         boolean isNarcotic,

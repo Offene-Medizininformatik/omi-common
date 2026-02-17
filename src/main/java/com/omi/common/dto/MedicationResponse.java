@@ -1,4 +1,4 @@
-package main.java.com.omi.common.dto;
+package com.omi.common.dto;
 
 public record MedicationResponse(
         String name,
