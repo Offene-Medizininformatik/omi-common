@@ -7,9 +7,11 @@ import com.omi.common.enums.medication.MedicationType;
 import com.omi.common.enums.medication.SaleStatus;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Builder;
 
 import java.util.List;
 
+@Builder
 public record MedicationResponse(
         String name,
         MedicationType type,

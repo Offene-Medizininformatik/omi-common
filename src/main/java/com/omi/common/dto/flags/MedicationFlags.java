@@ -1,5 +1,8 @@
 package com.omi.common.dto.flags;
 
+import lombok.Builder;
+
+@Builder
 public record MedicationFlags(
         boolean gbaDecree,
         boolean excludedFromPrescription,
