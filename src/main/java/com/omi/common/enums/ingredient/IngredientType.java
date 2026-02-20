@@ -2,6 +2,8 @@ package com.omi.common.enums.ingredient;
 
 import com.omi.common.enums.interfaces.DisplayableEnum;
 
+import java.util.Map;
+
 public enum IngredientType implements DisplayableEnum {
     PRESERVATIVE("Preservative"),
     INGREDIENT("Ingredient"),
@@ -22,5 +24,24 @@ public enum IngredientType implements DisplayableEnum {
     @Override
     public String getDisplayName() {
         return displayName;
+    }
+
+    private static final Map<String, IngredientType> GERMAN_MAPPING = Map.of(
+            "konservierungsmittel", PRESERVATIVE,
+            "inhaltsstoff/zutaten", INGREDIENT,
+            "extraktionsmittel", EXTRACTANT,
+            "hilfsstoff", EXCIPIENT,
+            "wirkstoff", ACTIVE_INGREDIENT,
+            "be", BE,
+            "entsprechend", ACCORDING,
+            "farbstoff", DYE,
+            "äquivalenz", EQUIVALENCE
+    );
+
+    public static IngredientType fromGerman(String germanValue) {
+        if (germanValue == null || germanValue.isBlank()) {
+            return null;
+        }
+        return GERMAN_MAPPING.get(germanValue.toLowerCase().trim());
     }
 }
