@@ -39,4 +39,11 @@ public enum Unit implements DisplayableEnum {
             "be", BREAD_UNIT,
             "mio. zellen", MILLION_CELL_UNIT
     );
+
+    public static Unit fromGerman(String germanValue) {
+        if (germanValue == null || germanValue.isBlank()) {
+            return null;
+        }
+        return GERMAN_MAPPING.get(germanValue.toLowerCase().trim());
+    }
 }
