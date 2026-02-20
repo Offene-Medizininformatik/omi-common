@@ -14,7 +14,7 @@ import java.util.List;
 @Builder
 public record MedicationResponse(
         String name,
-        MedicationType type,
+        List<MedicationType> type,
         String manufacturer,
         String pzn,
 
