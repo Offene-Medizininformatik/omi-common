@@ -5,8 +5,9 @@ import lombok.Builder;
 
 @Builder
 public record MedicationPackage(
-        Double itemCount,
+        Double quantityUnitAmount,
+        Double quantityBaseFactor,
+        Double quantityMultiplierFactor,
         String itemType,
-        NormSize normSize
-) {
+        NormSize normSize) {
 }
