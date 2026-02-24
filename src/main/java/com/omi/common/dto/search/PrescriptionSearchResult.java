@@ -8,7 +8,10 @@ public record PrescriptionSearchResult(
         String manufacturerName,
         String dosageForm,
         String packageSizeByDecree,
-        BigDecimal packageQuantity,
+        BigDecimal packageQuantityUnitAmount,
+        BigDecimal packageQuantityBaseFactor,
+        BigDecimal packageQuantityMultiplierFactor,
+        BigDecimal packageQuantityCalculated,
         String packageUnit,
         BigDecimal pharmacyRetailPrice,
         BigDecimal copaymentAmount,
@@ -16,7 +19,6 @@ public record PrescriptionSearchResult(
         String wirkstoff,
         String wirkstaerke,
         String atcCode,
-
         PrescriptionSearchFlags flags
 ) {
 }
