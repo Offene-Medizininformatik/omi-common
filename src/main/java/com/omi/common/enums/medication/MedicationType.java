@@ -22,8 +22,7 @@ public enum MedicationType implements DisplayableEnum {
     DIAGNOSTIC("Diagnostic"),
     PHYTOPHARMACEUTICAL("Phytopharmaceutical"),
     PLANT_PROTECTIVE("Plant Protective"),
-    ADJUVANT("Adjuvant"),
-    COMBINATION_PACK("Combination Package");
+    ADJUVANT("Adjuvant");
 
     private final String displayName;
 
@@ -55,8 +54,7 @@ public enum MedicationType implements DisplayableEnum {
             Map.entry("diagnostika", DIAGNOSTIC),
             Map.entry("phytopharmakon", PHYTOPHARMACEUTICAL),
             Map.entry("pflanzenschutzmittel", PLANT_PROTECTIVE),
-            Map.entry("hilfsmittel", ADJUVANT),
-            Map.entry("kombipackung", COMBINATION_PACK)
+            Map.entry("hilfsmittel", ADJUVANT)
     );
 
     public static MedicationType fromGerman(String germanValue) {
