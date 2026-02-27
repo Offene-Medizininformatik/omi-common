@@ -27,6 +27,8 @@ public record MedicationResponse(
         List<Indication> indications,
         List<CounterIndication> counterIndications,
         MedicationFlags flags,
-        MedicationProperties properties
+        MedicationProperties properties,
+
+        List<AlternativePackage> alternativePackage
 ) {
 }
