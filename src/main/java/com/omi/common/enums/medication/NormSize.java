@@ -38,4 +38,17 @@ public enum NormSize implements DisplayableEnum {
         }
         return GERMAN_MAPPING.get(germanValue.toLowerCase().trim());
     }
+
+    public static String toGerman(NormSize normSize) {
+        if (normSize == null || normSize.getDisplayName().isBlank()) {
+            return null;
+        }
+        return GERMAN_MAPPING
+                .entrySet()
+                .stream()
+                .filter( entry -> entry.getValue() == normSize)
+                .map(Map.Entry::getKey)
+                .findFirst()
+                .orElse(null);
+    }
 }
