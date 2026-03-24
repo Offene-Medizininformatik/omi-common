@@ -22,7 +22,6 @@ public enum ArvType {
     KOMBI_VERORDNUNGSZIEL(16);
 
     private final int id;
-
     ArvType(int id) {
         this.id = id;
     }

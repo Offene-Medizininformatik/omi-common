@@ -4,6 +4,6 @@ public record ArvConditionDto(
         Integer ageFrom,
         Integer ageTo,
         String ageUnit,
-        Integer targetSexKbv,
+        String targetSexKbv,
         boolean isEinschluss
 ) {}
