@@ -13,11 +13,13 @@ public record PrescriptionSearchResult(
         BigDecimal packageQuantityMultiplierFactor,
         BigDecimal packageQuantityCalculated,
         String packageUnit,
+        String salesStatusCode,
         BigDecimal pharmacyRetailPrice,
         BigDecimal copaymentAmount,
         String priceVsMaxReimbursement,
         String wirkstoff,
         String wirkstaerke,
+        BigDecimal wirkstaerkeSort,
         String atcCode,
         PrescriptionSearchFlags flags
 ) {

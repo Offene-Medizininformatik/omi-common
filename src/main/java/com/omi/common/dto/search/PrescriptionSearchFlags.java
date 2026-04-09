@@ -7,6 +7,9 @@ public record PrescriptionSearchFlags(
         boolean hasPrescriptionRestrictionAnnexIii,
         boolean hasPrescriptionExclusionAnnexIii,
         boolean flagArv,
-        boolean flagHasDiscount
+        boolean flagHasDiscount,
+        boolean gbaDecree,
+        boolean redHandLetter,
+        boolean blueHandLetter
 ) {
 }
