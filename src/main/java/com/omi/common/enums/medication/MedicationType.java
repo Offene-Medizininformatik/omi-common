@@ -4,6 +4,8 @@ import com.omi.common.enums.interfaces.DisplayableEnum;
 
 import java.util.Map;
 
+// ! When changing anything here, make sure to also change the enum in the frontend
+// src/app/medication/types/medication.ts 
 public enum MedicationType implements DisplayableEnum {
     PHARMACEUTICAL("Pharmaceutical"),
     MEDICAL_DEVICE("Medical Device"),
