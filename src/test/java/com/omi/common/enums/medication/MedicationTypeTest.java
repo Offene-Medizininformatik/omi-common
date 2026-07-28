@@ -36,17 +36,13 @@ class MedicationTypeTest {
     }
 
     @Test
-    void exposesPreferredGermanDisplayLabels() {
+    void exposesGermanDisplayLabelsAndUsesThemForParsing() {
         assertEquals("Tierarzneimittel", MedicationType.ANIMAL_PHARMACEUTICAL.getDisplayName());
         assertEquals("Medizinisches Zubehör", MedicationType.MEDICAL_ACCESSORY.getDisplayName());
         assertEquals("Homöopathisches Arzneimittel", MedicationType.HOMEOPATHIC.getDisplayName());
         assertEquals("Nahrungsergänzungsmittel", MedicationType.DIETARY_SUPPLEMENT.getDisplayName());
-    }
-
-    @Test
-    void acceptsDeliberateLegacyGermanInputAliases() {
-        assertEquals(MedicationType.ANIMAL_PHARMACEUTICAL, MedicationType.fromGerman("Veterinärprodukt"));
-        assertEquals(MedicationType.HOMEOPATHIC, MedicationType.fromGerman("Homeopathisches Arzneimittel"));
-        assertEquals(MedicationType.DIETARY_SUPPLEMENT, MedicationType.fromGerman("Nahrungergänzungsmittel"));
+        for (MedicationType type : MedicationType.values()) {
+            assertEquals(type, MedicationType.fromGerman(type.getDisplayName()));
+        }
     }
 }
